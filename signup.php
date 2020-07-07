@@ -55,7 +55,7 @@
 						</div><br>
 						<div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-							<input type="text" class="form-control" placeholder="Lasst Name" name="last_name" required="required">
+							<input type="text" class="form-control" placeholder="Last Name" name="last_name" required="required">
 						</div><br>
 						<div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
@@ -63,11 +63,11 @@
 						</div><br>
 						<div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input id="email" type="email" class="form-control" placeholder="Password" name="u_pass" required="required">
+							<input id="email" type="email" class="form-control" placeholder="Email" name="u_email" required="required">
 						</div><br>
 						<div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down"></i></span>
-							<select class="form-control input-md" name="u_gender" required="required">
+							<select class="form-control input-md" name="u_country" required="required">
 								<option disabled>Select your country</option>
 								<option>Sri Lanka</option>
 								<option>India</option>
@@ -94,7 +94,7 @@
 						<a style="text-decoration: none; float: right; color: #187FAB;" data-toggle="tooltip" title="Signin" href="signin.php">Already have an account?</a><br><br>
 
 						<center><button id="signup" class="btn btn-info btn-lg" name="sign_up">Sign Up</button></center>
-						<!--<?php include("insert_user.php"); ?>-->
+						<?php include("insert_user.php"); ?>
 					</form>
 				</div>
 			</div>
