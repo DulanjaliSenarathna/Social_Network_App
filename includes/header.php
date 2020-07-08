@@ -1,18 +1,18 @@
 <?php
-include("includes/connection");
+include("includes/connection.php");
 ?>
 
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false"></button>
+			<button type="button" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" aria-expanded="false"></button>
 			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar">Toggle navigation</span>
-			<span class="icon-bar">Toggle navigation</span>
-			<span class="icon-bar">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
 			<a href="home.php" class="navbar-brand">WeChat</a>
 		</div>
-		<div class="collapse navbar-collapse">
+		<div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<?php
 				$user = $_SESSION['user_email'];
@@ -34,7 +34,7 @@ include("includes/connection");
 				$user_image = $row['user_image'];
 				$user_cover = $row['user_cover'];
 				$recovery_account = $row['recovery_account'];
-				$register_date = $row['register_date'];
+				$register_date = $row['user_reg_date'];
 
 				$user_posts = "select * from posts where user_id='$user_id'";
 				$run_posts = mysqli_query($con,$user_posts);
@@ -49,7 +49,7 @@ include("includes/connection");
 				 	echo "
 
 				 	<li class='dropdown'>
-				 		<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'><span class='glyphicon glyphicon-chevron-down'></span></a>
+				 		<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'><span> <i class='glyphicon glyphicon-chevron-down'></i></span></a>
 				 		<ul class='dropdown-menu'>
 				 			<li>
 				 				<a href='my_post.php?u_id=$user_id'>My Posts <span class='badge badge-secondary'>$posts</span></a>
